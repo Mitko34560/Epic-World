@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Epic World</title>
+    <style>
+        body {
+            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            color: #00ffcc;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px cyan;
+            position: relative;
+        }
+        h1 {
+            font-size: 50px;
+            background: linear-gradient(90deg, #00ccff, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+        .server-info, .contacts, .store {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px cyan;
+            color: #00ccff;
+            text-align: center;
+        }
+        .product {
+            display: inline-block;
+            background: linear-gradient(90deg, #800080, #D000D0);
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px lime;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+        .product:hover {
+            background: linear-gradient(90deg, #00ff00, #008000);
+            box-shadow: 0px 0px 20px lime;
+            transform: scale(1.1);
+        }
+        .product-desc {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            background: rgba(0, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function toggleDescription(id) {
+            var desc = document.getElementById(id);
+            desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 Добро пожаловать в Minecraft Epic World! 🌌</h1>
+        <p>Этот сервер — настоящий приключенческий мир, полный тайн, эпичных битв и удивительных построек! Присоединяйтесь к нам и станьте частью этой невероятной истории!</p>
+    </div>
+    
+    <div class="store">
+        <h2>🛒 Магазин</h2>
+        <div class="product" onclick="toggleDescription('premium')">Премиум - 250.00 ₽</div>
+        <div id="premium" class="product-desc" style="display:none;">✔ /feed – бесконечная еда<br>✔ /workbench – крафт в любом месте<br>✔ /repair – починка предметов<br>✔ +3 дополнительных sethome (итого 5)<br>✔ Доступ к эксклюзивному питомцу<br>✔ Улучшенный набор ресурсов</div>
+
+        <div class="product" onclick="toggleDescription('elite')">Элита - 500.00 ₽</div>
+        <div id="elite" class="product-desc" style="display:none;">✔ Все привилегии Premium<br>✔ /god – бессмертие<br>✔ /speed – изменение скорости передвижения<br>✔ /back – возврат на место смерти<br>✔ /near – просмотр игроков рядом<br>✔ +5 sethome (итого 10)<br>✔ Улучшенные стартовые вещи</div>
+
+        <div class="product" onclick="toggleDescription('deluxe')">Deluxe - 2 000.00 ₽</div>
+        <div id="deluxe" class="product-desc" style="display:none;">✔ Все привилегии Legend<br>✔ /vanish – невидимость<br>✔ /enchant – зачарование предметов без стола чар<br>✔ /tphere – телепортация игроков без их согласия<br>✔ Персональный префикс и цветной ник<br>✔ Доступ к элитной зоне с редкими ресурсами<br>✔ Эксклюзивный эффект ауры</div>
+
+        <div class="product" onclick="toggleDescription('cobra')">🐍 COBRA - 2 000.00 ₽</div>
+        <div id="cobra" class="product-desc" style="display:none;">✅ Цветной ник – возможность менять цвет ника в чате.<br>✅ /hat – надеть любой блок на голову.<br>✅ /workbench – доступ к верстаку в любом месте.<br>✅ /feed – моментально утолять голод (с перезарядкой).<br>✅ /fly – возможность летать (если баланс сервера позволяет).<br>И все другие права!</div>
+
+        <div class="product" onclick="toggleDescription('hide')">🕵️ HIDE - 5 000.00 ₽</div>
+        <div id="hide" class="product-desc" style="display:none;">✅ /vanish – возможность становиться невидимым (не для PvP).<br>✅ /disguise – превращение в мобов (если есть плагин).<br>✅ /nick – смена ника на сервере.<br>✅ /hat – надевать блоки на голову.<br>✅ /ptime – менять личное время суток.</div>
+    </div>
+    <div class="server-info">
+        <h2>🌍 Информация о сервере</h2>
+        <p><strong>IP:</strong> epicworld.falixsrv.me</p>
+        <p><strong>Версия:</strong> 1.16.5</p>
+        <p><strong>Сайт:</strong> <a href="https://epicworldru.trademc.org" target="_blank">epicworldru.trademc.org</a></p>
+    </div>
+
+    <div class="contacts">
+        <h2>📞 Контакты</h2>
+        <p><strong>Discord:</strong> <a href="https://discord.gg/nbkxExFwav" target="_blank">Присоединяйтесь</a></p>
+        <p><strong>Telegram Bot:</strong> <a href="https://t.me/epicworldoffical_bot" target="_blank">@epicworldoffical_bot</a></p>
+    </div>
+</body>
+</html>
